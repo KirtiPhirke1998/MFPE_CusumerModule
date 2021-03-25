@@ -1,0 +1,35 @@
+
+
+        [HttpPut("UpdateBussinessProperty")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public async Task<ObjectResult> UpdateBusinessProperty(Property property)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new BadRequestObjectResult(ModelState);
+            }
+            var Result = await repository.UpdateBussinessProperty(property);
+
+            if (!Result)
+            {
+                return new ObjectResult("Database error") { StatusCode = 500 };
+            }
+            return new CreatedResult("FindConsumerProperty", new { id = property });
+        }
+
+
+        [HttpGet("{id}", Name = "FindConsumerBussiness")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ObjectResult> ViewConsumerBussiness(int consumerid)
+        {
+            return Ok(await repository.ViewConsumerBussiness(consumerid));
+        }
+
+        [HttpGet("{id}", Name = "FindConsumerProperty")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ObjectResult> ViewConsumerProperty(int consumerid, int propertyid)
+        {
+            return Ok(await repository.ViewConsumerProperty(consumerid, propertyid));
+        }

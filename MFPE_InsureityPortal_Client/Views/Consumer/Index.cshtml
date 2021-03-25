@@ -1,0 +1,61 @@
+﻿@model MFPE_InsureityPortal_Client.Models.Consumer
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div>
+    <h4>Consumer</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AgentId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AgentId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ValidityOfConsumer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ValidityOfConsumer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BussinessId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BussinessId)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Business.BusinessMaster.BussinessValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Business.BusinessMaster.BussinessValue)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "UpdateConsumerBussiness", new { id = Model.id  }) |
+    <a asp-action="ViewConsumerBussiness">Back to List</a>
+</div>

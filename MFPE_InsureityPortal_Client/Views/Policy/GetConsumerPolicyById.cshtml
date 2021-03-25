@@ -1,0 +1,101 @@
+﻿@model MFPE_InsureityPortal_Client.Models.ConsumerPolicy
+
+@{
+    ViewData["Title"] = "GetConsumerPolicyById";
+}
+
+<h1>GetConsumerPolicyById</h1>
+
+<div>
+    <h4>ConsumerPolicy</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PolicyId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConsumerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConsumerId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConsumerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConsumerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BussinessType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BussinessType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BussinessName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BussinessName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyStatus)
+        </dt>
+        <dd class="col-sm-10">
+
+            @if (Model.PolicyStatus == false)
+            {
+                @Html.DisplayName("Pending")
+            }
+            else
+            {
+                @Html.DisplayName("Issued")
+            }
+
+        </dd>
+
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyMaster.AssuredSum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PolicyMaster.AssuredSum)
+        </dd>
+
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyMaster.BaseLocation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PolicyMaster.BaseLocation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyMaster.ConsumerType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PolicyMaster.ConsumerType)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyMaster.PropertyType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PolicyMaster.PropertyType)
+        </dd>
+
+        @if (ViewBag.Message != null)
+        {
+            <p>@ViewBag.Message</p>
+        }
+
+
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Redirect to policy Issuing Portal", "IssueConsumerPolicy", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="IssueConsumerPolicy">Back to List</a>
+</div>

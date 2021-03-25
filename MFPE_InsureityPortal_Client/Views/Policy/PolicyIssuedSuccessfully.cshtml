@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "PolicyIssuedSuccessfully";
+}
+
+<h1>PolicyIssuedSuccessfully</h1>
+
+<p>
+   Policy Issued successfully to consumer with ConsumerID :  @ViewBag.Message
+</p>
+
+@Html.ActionLink("Check status", "GetConsumerPolicyById", new { id = @ViewBag.Message })
+

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "PolicyCreationStatus";
+}
+
+<h1>PolicyCreationStatus</h1>
+
+<h3>Wait For Policy To Be approved.</h3>
+
+@Html.ActionLink("Check status", "GetConsumerPolicyById", new { id = @ViewBag.Message })
+
+

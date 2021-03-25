@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MFPE_InsureityPortal_Client.Models.Property>
+
+@{
+    ViewData["Title"] = "ViewBussinessProperty";
+}
+
+<h1>ViewBussinessProperty</h1>
+
+<p>
+    <a asp-action="CreateBussinessProperty">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildingType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildingAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertMasterId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BussinessId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertMasterId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BussinessId)
+            </td>
+            <td>
+               | @Html.ActionLink("Edit", "UpdateBussinessProperty", new { id=item.id }) |
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

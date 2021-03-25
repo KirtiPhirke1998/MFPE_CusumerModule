@@ -1,0 +1,68 @@
+﻿@model IEnumerable<MFPE_InsureityPortal_Client.Models.Consumer>
+
+@{
+    ViewData["Title"] = "ViewConsumerBussiness";
+}
+
+<h1>ViewConsumerBussiness</h1>
+
+<p>
+    <a asp-action="CreateConsumerBussiness">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValidityOfConsumer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BussinessId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BussinessId)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValidityOfConsumer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BussinessId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit","UpdateConsumerBussiness", new {  id=item.id  }) |
+                @Html.ActionLink("Details", "Index", new { id=item.id }) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

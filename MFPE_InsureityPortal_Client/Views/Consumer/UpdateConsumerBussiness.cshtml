@@ -1,0 +1,84 @@
+﻿@model MFPE_InsureityPortal_Client.Models.Consumer
+
+@{
+    ViewData["Title"] = "UpdateConsumerBussiness";
+}
+
+<h1>UpdateConsumerBussiness</h1>
+
+<h4>Consumer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateConsumerBussiness">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AgentId" class="control-label"></label>
+                <input asp-for="AgentId" class="form-control" />
+                <span asp-validation-for="AgentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValidityOfConsumer" class="control-label"></label>
+                <input asp-for="ValidityOfConsumer" class="form-control" />
+                <span asp-validation-for="ValidityOfConsumer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BussinessId" class="control-label"></label>
+                <input asp-for="BussinessId" class="form-control" />
+                <span asp-validation-for="BussinessId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.BussinessName" class="control-label"></label>
+                <input asp-for="Business.BussinessName" class="form-control" />
+                <span asp-validation-for="Business.BussinessName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.BussinessType" class="control-label"></label>
+                <input asp-for="Business.BussinessType" class="form-control" />
+                <span asp-validation-for="Business.BussinessType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.TotalEmployees" class="control-label"></label>
+                <input asp-for="Business.TotalEmployees" class="form-control" />
+                <span asp-validation-for="Business.TotalEmployees" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.BusinessMaster.AnnualTurnover" class="control-label"></label>
+                <input asp-for="Business.BusinessMaster.AnnualTurnover" class="form-control" />
+                <span asp-validation-for="Business.BusinessMaster.AnnualTurnover" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.BusinessMaster.capitalInvested" class="control-label"></label>
+                <input asp-for="Business.BusinessMaster.capitalInvested" class="form-control" />
+                <span asp-validation-for="Business.BusinessMaster.capitalInvested" class="text-danger"></span>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ViewConsumerBussiness">Back to List</a>
+</div>
+

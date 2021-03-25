@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "AllOperations";
+}
+
+
+
+
+
+<body>
+
+
+    <div class="wrap">
+        <h2 class="bg-success">Policy Administration System </h2>
+        <button style="position:relative;left:70px" class="bg-warning">
+            <span> @Html.ActionLink("CreateConsumerBussiness", "CreateConsumerBussiness", "Consumer")</span>
+        </button>
+        <br />
+        <br />
+        <button style="position:relative;left:70px" class="bg-warning">
+            <span>@Html.ActionLink("CreateBussinessProperty", "CreateBussinessProperty", "Consumer")</span>
+        </button>
+        <br />
+        <br />
+        <button style="position:relative;left:70px" class="bg-warning">
+            <span>@Html.ActionLink("CreatePolicyforConsumer", "CreatePolicy", "Policy")</span>
+        </button>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+﻿@model MFPE_InsureityPortal_Client.Models.Consumer
+
+@{
+    ViewData["Title"] = "CreateConsumerBussiness";
+}
+
+<h1>CreateConsumerBussiness</h1>
+
+<h4>Consumer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateConsumerBussiness">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AgentId" class="control-label"></label>
+                <input asp-for="AgentId" class="form-control" />
+                <span asp-validation-for="AgentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValidityOfConsumer" class="control-label"></label>
+                <input asp-for="ValidityOfConsumer" class="form-control" />
+                <span asp-validation-for="ValidityOfConsumer" class="text-danger"></span>
+            </div>
+            <!-- <div class="form-group">
+           <label asp-for="BussinessId" class="control-label"></label>
+           <input asp-for="BussinessId" class="form-control" />
+           <span asp-validation-for="BussinessId" class="text-danger"></span>
+       </div>-->
+
+            <div class="form-group">
+                <label asp-for="Business.BussinessName" class="control-label"></label>
+                <input asp-for="Business.BussinessName" class="form-control" />
+                <span asp-validation-for="Business.BussinessName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Business.BussinessType" class="control-label"></label>
+                <input asp-for="Business.BussinessType" class="form-control" />
+                <span asp-validation-for="Business.BussinessType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.TotalEmployees" class="control-label"></label>
+                <input asp-for="Business.TotalEmployees" class="form-control" />
+                <span asp-validation-for="Business.TotalEmployees" class="text-danger"></span>
+            </div>
+            <!--<div class="form-group">
+        <label asp-for="Business.BussinessMasterId" class="control-label"></label>
+        <input asp-for="Business.BussinessMasterId" class="form-control" />
+        <span asp-validation-for="Business.BussinessMasterId" class="text-danger"></span>
+    </div>-->
+
+            <div class="form-group">
+                <label asp-for="Business.BusinessMaster.HasBusinessTypes" class="control-label"></label>
+                <input asp-for="Business.BusinessMaster.HasBusinessTypes" class="form-control" />
+                <span asp-validation-for="Business.BusinessMaster.HasBusinessTypes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.BusinessMaster.AnnualTurnover" class="control-label"></label>
+                <input asp-for="Business.BusinessMaster.AnnualTurnover" class="form-control" />
+                <span asp-validation-for="Business.BusinessMaster.AnnualTurnover" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.BusinessMaster.capitalInvested" class="control-label"></label>
+                <input asp-for="Business.BusinessMaster.capitalInvested" class="form-control" />
+                <span asp-validation-for="Business.BusinessMaster.capitalInvested" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Business.BusinessMaster.BussinessValue" class="control-label"></label>
+                <input asp-for="Business.BusinessMaster.BussinessValue" class="form-control" />
+                <span asp-validation-for="Business.BusinessMaster.BussinessValue" class="text-danger"></span>
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ViewConsumerBussiness">View All Consumer Bussiness Registered</a>
+    <a>@Html.ActionLink("Go Back", "AllOperations", "Auth")</a> 
+</div>
+

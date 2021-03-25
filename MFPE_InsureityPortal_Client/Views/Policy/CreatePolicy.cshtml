@@ -1,0 +1,46 @@
+﻿@model MFPE_InsureityPortal_Client.Models.ConsumerPolicyDetails
+
+@{
+    ViewData["Title"] = "CreatePolicy";
+}
+
+<h1>CreatePolicy</h1>
+
+<h4>ConsumerPolicyDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreatePolicy">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="ConsumerId" class="control-label"></label>
+                <input asp-for="ConsumerId" class="form-control" />
+                <span asp-validation-for="ConsumerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConsumerName" class="control-label"></label>
+                <input asp-for="ConsumerName" class="form-control" />
+                <span asp-validation-for="ConsumerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BussinessType" class="control-label"></label>
+                <input asp-for="BussinessType" class="form-control" />
+                <span asp-validation-for="BussinessType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BussinessName" class="control-label"></label>
+                <input asp-for="BussinessName" class="form-control" />
+                <span asp-validation-for="BussinessName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Go Back", "AllOperations", "Auth")
+</div>
+
