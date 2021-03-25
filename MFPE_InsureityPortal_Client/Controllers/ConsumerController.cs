@@ -51,7 +51,7 @@ namespace MFPE_InsureityPortal_Client.Controllers
                         new AuthenticationHeaderValue("Bearer", token);
 
 
-                    client.BaseAddress = new Uri("https://localhost:44369/");
+                    client.BaseAddress = new Uri("https://mfpecusumermodule1.azurewebsites.net");
 
                     var jsonstring = JsonConvert.SerializeObject(consumer);
 
